@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" id="cargando">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,25 +21,25 @@
     <main class="prueba">
         <section class="encryptor">
             <!--Espacio para escribir-->
-            <textarea oninput="restrictInput(event)" class="encryptor__input" placeholder="Ingresa el texto aquí..."></textarea>
+            <textarea  id="textarea" oninput="restrictInput(event)" class="encryptor__input" placeholder="Ingresa el texto aquí..."></textarea>
             <!--Aviso-->
             <div class="encryptor__tip tip">
-                <img class="tip__image" src="/assets/images/danger.png" alt="alert icon">
+                <img class="tip__image" src="./assets/images/danger.png" alt="alert icon">
                 <p class="tip__text">¡Escribe sin acentos y en minúsculas!</p>
             </div>
             <!--Botones de encriptar y desencriptar-->
             <div class="encryptor__buttons">
-                <input class="encryptor__buttons--encrypt button" type="button" value="Encriptar">
+                <input id="encriptar" class="encryptor__buttons--encrypt button" type="button" value="Encriptar">
                 <input class="encryptor__buttons--decrypt button" type="button" value="Desencriptar">
             </div>
         </section>
         <!--Output/Resultado de la encriptación/desencriptación-->
         <section class="output">
             <!--Imagen y texto predeterminado-->
-            <img class="output__figure" src="./assets/images/programador.gif" alt="Imagen en movimiento de programador">
+            <img id="imagenOculto" class="output__figure" src="./assets/images/programador.gif" alt="Imagen en movimiento de programador">
             <div class="output__tip tip">
-                <h3 class="tip__title">No se encontró ningún texto</h3>
-                <p class="tip__content">Ingresa el texto que deseas encriptar/desencriptar</p>
+                <h3 id="textoOculto" class="tip__title">No se encontró ningún texto</h3>
+                <p id="texto" class="tip__content">Ingresa el texto que deseas encriptar/desencriptar</p>
             </div>
             <!--Boton copiar-->
             <input class="output__button button" type="button" value="Copiar">
@@ -54,6 +54,6 @@
         <p>Creación de una página web utilizando el DOM - FSJ25 - MODULO 2 - GRUPO 5</p>
     </footer>
     <!-- JS -->
-<script src="js/script.js"></script>
+<script src="./assets/js/script.js"></script>
 </body>
 </html>
