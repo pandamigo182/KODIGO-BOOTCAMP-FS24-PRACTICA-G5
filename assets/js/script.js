@@ -26,3 +26,35 @@ const textoOculto = document.getElementById('textoOculto');
 textoOculto.style.display = 'none';
 
 })
+
+// Función para alternar el modo noche/día
+const modeToggle = document.getElementById('modeToggle');
+const moonIcon = document.getElementById('moonIcon');
+const sunIcon = document.getElementById('sunIcon');
+
+modeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('night-mode');
+    
+    // Alternar íconos
+    if (document.body.classList.contains('night-mode')) {
+        moonIcon.style.display = 'none';
+        sunIcon.style.display = 'block';
+    } else {
+        moonIcon.style.display = 'block';
+        sunIcon.style.display = 'none';
+    }
+});
+
+// Mostrar el modo correcto al cargar la página
+window.addEventListener('load', () => {
+    alert("Bienvenido al sistema");
+
+    // Mostrar el ícono correcto al cargar la página
+    if (document.body.classList.contains('night-mode')) {
+        moonIcon.style.display = 'none';
+        sunIcon.style.display = 'block';
+    } else {
+        moonIcon.style.display = 'block';
+        sunIcon.style.display = 'none';
+    }
+});
